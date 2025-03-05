@@ -1,13 +1,11 @@
-import HeroSection from "@/components/sections/HeroSection";
-import { StickyFooter } from "@/components/StickyFooter";
+import ImageProvider from "@/components/ImageProvider";
 import React from "react";
 
 const Home = () => {
   return (
-    <>
-      <HeroSection  />
-      <StickyFooter />
-    </>
+    <div className="h-screen">
+      <ImageProvider />
+    </div>
   );
 }
 

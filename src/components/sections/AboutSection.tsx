@@ -1,5 +1,7 @@
 'use server';
 
+import { ApiPath } from "@/models/apiPaths";
+import { getContent } from "@/utils/Strapi";
 import React from "react";
 
 export interface IAboutContent {
@@ -7,9 +9,7 @@ export interface IAboutContent {
 }
 
 const AboutSection: React.FC = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URI}/api/abouts`);
-  const aboutContent = await data.json();
-  const { Description }: IAboutContent = aboutContent.data[0];
+  const { Description }: IAboutContent = await getContent(ApiPath.About);
 
   return (
     <>
