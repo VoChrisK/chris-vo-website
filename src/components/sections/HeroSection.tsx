@@ -20,10 +20,20 @@ const HeroSection: React.FC<IHeroSectionProps> = async ({ heroImages }) => {
   const heroImageUrl = process.env.NEXT_PUBLIC_STRAPI_URI + randomHeroImage.url;
 
   return (
-    <div className="h-screen bg-no-repeat bg-cover bg-[50%]" style={{ backgroundImage: `url(${heroImageUrl})` }}>
-      <h3>{ Introduction }</h3>
-      <h1>{ Name }</h1>
-      <p>{ Description }</p>
+    <div 
+      className="h-screen flex justify-center items-center" 
+      style={{ 
+        background: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(${heroImageUrl})`, 
+        backgroundRepeat: 'no-repeat', 
+        backgroundSize: 'cover', 
+        backgroundPosition: '50%' 
+      }}
+    >
+      <div className="flex flex-col justify-center items-center text-center w-[53.125rem]">
+        <h3>{ Introduction }</h3>
+        <h1 className="text-6xl">{ Name }</h1>
+        <p>{ Description }</p>
+      </div>
     </div>
   );
 }

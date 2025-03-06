@@ -1,10 +1,7 @@
 
 
-interface NavbarProps {
 
-}
-
-export const Navbar: React.FC<NavbarProps> = () => {
+export const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-between bg-darker-gray">
 
