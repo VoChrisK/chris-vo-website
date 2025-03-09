@@ -31,7 +31,7 @@ export const Navbar: React.FC<INavbarProps> = ({ cvLogo }) => {
   const cvLogoUrl = process.env.NEXT_PUBLIC_STRAPI_URI + cvLogo[0].url;
 
   return (
-    <nav className="flex justify-between items-center bg-background h-[4rem]">
+    <nav className="flex fixed justify-between items-center bg-background h-[4rem] w-screen">
       <a className="ml-[1.875rem]" href={`${link}`}>
         <img className="
           w-[3.125rem] 

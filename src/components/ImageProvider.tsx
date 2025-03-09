@@ -10,12 +10,13 @@ const ImageProvider: React.FC = async () => {
   const images = await getImages();
   const heroImages = images.filter((image: any) => image.name.startsWith('hero_image'));
   const cvLogo = images.filter((image: any) => image.name.startsWith('cv_logo'));
+  const resumeIcons = images.filter((image: any) => image.name.startsWith('resume_icon'));
 
   return (
     <>
       <Navbar cvLogo={cvLogo} />
       <HeroSection heroImages={heroImages} />
-      <StickyFooter />
+      <StickyFooter resumeIcons={resumeIcons} />
     </>
   );
 }
