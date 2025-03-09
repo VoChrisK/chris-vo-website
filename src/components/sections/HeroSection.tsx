@@ -15,7 +15,7 @@ export interface IHeroContent {
 }
 
 const HeroSection: React.FC<IHeroSectionProps> = async ({ heroImages }) => {
-  const { Name, Introduction, Description }: IHeroContent = await getContent(ApiPath.Heroes);
+  const [{ Name, Introduction, Description }]: IHeroContent[] = await getContent(ApiPath.Heroes);
   const randomHeroImage = heroImages[Math.floor(Math.random() * 4)];
   const heroImageUrl = process.env.NEXT_PUBLIC_STRAPI_URI + randomHeroImage.url;
 

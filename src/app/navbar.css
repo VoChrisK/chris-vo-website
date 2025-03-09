@@ -1,0 +1,9 @@
+.navigation-list {
+  counter-reset: listCounter;
+}
+
+.navigation-link::before {
+  color: var(--title);
+  counter-increment: listCounter;
+  content: "0" counter(listCounter) ".";
+}

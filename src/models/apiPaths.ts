@@ -1,4 +1,5 @@
 export enum ApiPath {
   Heroes = '/api/heroes',
-  About = '/api/abouts'
+  About = '/api/abouts',
+  Navbar = '/api/navbars'
 }
