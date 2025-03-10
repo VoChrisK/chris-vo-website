@@ -1,0 +1,9 @@
+.section {
+  counter-reset: sectionCounter;
+}
+
+.header::before {
+  color: var(--title);
+  counter-increment: sectionCounter;
+  content: "0" counter(sectionCounter) ".";
+}
